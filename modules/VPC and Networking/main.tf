@@ -44,7 +44,7 @@ resource "aws_subnet" "private-subnet1" {
 }
 
 #create the second private subnet in the second availability zone
-resource "aws_subnet" "private-subnet1" {
+resource "aws_subnet" "private-subnet2" {
   vpc_id     = aws_vpc.main-vpc.id
   cidr_block = var.private_subnet2_cidr
   availability_zone = var.availability_zone2
