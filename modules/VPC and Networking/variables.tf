@@ -10,7 +10,7 @@ variable "vpc_cidr" {
 
 variable "public_subnet1_cidr" {
   description = "The CIDR block for the public-subnet1"
-  type        = string
+  type        = list()
 }
 
 variable "availability_zone1" {
@@ -20,7 +20,7 @@ variable "availability_zone1" {
 
 variable "public_subnet2_cidr" {
   description = "The CIDR block for the public-subnet2"
-  type        = string
+  type        = list()
 }
 
 variable "availability_zone2" {
@@ -30,12 +30,12 @@ variable "availability_zone2" {
 
 variable "private_subnet1_cidr" {
   description = "The CIDR block for the private-subnet1"
-  type        = string
+  type        = list()
 }
 
 variable "private_subnet2_cidr" {
   description = "The CIDR block for the private-subnet2"
-  type        = string
+  type        = list()
 }
 
 variable "public_subnet_rt_cidr" {
@@ -47,3 +47,5 @@ variable "private_subnet_rt_cidr" {
   description = "The CIDR block for the private-subnets"
   type        = string
 }
+
+
