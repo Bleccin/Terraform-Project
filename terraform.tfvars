@@ -18,3 +18,5 @@ instance_type          = "t2.micro"
 asg_max_size           = 4
 asg_min_size           = 2
 asg_desired_capacity   = 2
+alb_target_group_port  = 8080
+alb_port               = 80

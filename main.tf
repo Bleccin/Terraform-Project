@@ -1,4 +1,12 @@
 #configure provider
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
 provider "aws" {
   region = var.region
 }
@@ -36,4 +44,11 @@ module "compute" {
   asg_max_size         = var.asg_max_size
   asg_min_size         = var.asg_min_size
   asg_desired_capacity = var.asg_desired_capacity
+}
+
+module "load balancing" {
+  source                = "./modules/load balancing"
+  region                = var.region
+  alb_port              = var.alb_port
+  alb_target_group_port = var.alb_target_group_port
 }
